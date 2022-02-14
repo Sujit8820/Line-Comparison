@@ -39,15 +39,18 @@ namespace Line_Comparison
 
             Console.WriteLine($"\nFirst line length: {firstLineLength}\nSecond line length: {secondLineLength}\n");
 
-            bool status = firstLineLength.Equals(secondLineLength);
-            if (status == true)
+            int status = (firstLineLength.CompareTo(secondLineLength));
+            if (status == 0)
             {
                 Console.WriteLine("Two lines are equal");
             }
-            else
+            else if (status == 1)
             {
-                Console.WriteLine("Two lines are not equal");
+                Console.WriteLine("First line is greater than second line");
             }
+            else
+                Console.WriteLine("First line is lesser than second line");
+
         }
 
     }
